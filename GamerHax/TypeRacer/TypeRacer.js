@@ -5,4 +5,31 @@ function hacktivate(){
   inputArea.maxLength = 1000;
   inputArea.value = completeFinish;
 }
-hacktivate();
+
+var rrhb = document.createElement("BUTTON");
+rrhb.innerHTML = "Activate Hack";
+rrhb.style.position = "fixed";
+rrhb.style.bottom = "20px";
+rrhb.style.left = "30px";
+rrhb.style.border = "none";
+rrhb.style.outline = "none";
+rrhb.style.backgroundColor = "black";
+rrhb.style.color = "white";
+rrhb.style.cursor = "pointer";
+rrhb.style.padding = "15px";
+rrhb.style.borderRadius = "10px";
+rrhb.style.fontSize = "18px";
+
+doument.body.appendChild(rrhb);
+
+rrhb.addEventListener('mouseenter', e => {
+  rrhb.style.backgroundColor = "#555";
+});
+
+rrhb.addEventListener('mouseleave', e => {
+  rrhb.style.backgroundColor = "black";
+});
+
+rrhb.addEventListener('click', e => {
+  hacktivate();
+});
