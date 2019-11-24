@@ -20,7 +20,7 @@ rrhb.style.padding = "15px";
 rrhb.style.borderRadius = "10px";
 rrhb.style.fontSize = "18px";
 
-doument.body.appendChild(rrhb);
+document.body.appendChild(rrhb);
 
 rrhb.addEventListener('mouseenter', e => {
   rrhb.style.backgroundColor = "#555";
