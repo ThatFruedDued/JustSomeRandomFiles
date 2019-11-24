@@ -2,7 +2,7 @@ function hacktivate(){
   var answers = document.getElementsByClassName("inputPanel")[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0].children;
   var completeFinish;
   for(var i = 0; i < answers.length; i++){
-    completeFinish = completeFinish + answers[i] + "";
+    completeFinish = completeFinish + answers[i].innerHTML + "";
   }
   var inputArea = document.getElementsByClassName("txtInput")[0];
   inputArea.maxLength = 1000;
