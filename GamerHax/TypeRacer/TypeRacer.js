@@ -1,6 +1,9 @@
 function hacktivate(){
   var answers = document.getElementsByClassName("inputPanel")[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0].children;
-  var completeFinish = answers[0].innerHTML + answers[1].innerHTML + answers[2].innerHTML + "";
+  var completeFinish;
+  for(var i = 0; i < answers.length; i++){
+    completeFinish = completeFinish + answers[i] + "";
+  }
   var inputArea = document.getElementsByClassName("txtInput")[0];
   inputArea.maxLength = 1000;
   inputArea.value = completeFinish;
@@ -9,15 +12,15 @@ function hacktivate(){
 var rrhb = document.createElement("BUTTON");
 rrhb.innerHTML = "Activate Hack";
 rrhb.style.position = "fixed";
-rrhb.style.bottom = "20px";
-rrhb.style.left = "30px";
+rrhb.style.bottom = "10px";
+rrhb.style.left = "15px";
 rrhb.style.border = "none";
 rrhb.style.outline = "none";
 rrhb.style.backgroundColor = "black";
 rrhb.style.color = "white";
 rrhb.style.cursor = "pointer";
 rrhb.style.padding = "15px";
-rrhb.style.borderRadius = "10px";
+rrhb.style.borderRadius = "5px";
 rrhb.style.fontSize = "18px";
 
 document.body.appendChild(rrhb);
