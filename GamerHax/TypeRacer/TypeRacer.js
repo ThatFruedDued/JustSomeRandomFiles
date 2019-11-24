@@ -8,16 +8,16 @@ function hacktivate(){
 
 var rrhb = document.createElement("BUTTON");
 rrhb.innerHTML = "Activate Hack";
-rrhb.position = "fixed";
+rrhb.style.position = "fixed";
 rrhb.style.bottom = "20px";
 rrhb.style.left = "30px";
 rrhb.style.border = "none";
 rrhb.style.outline = "none";
 rrhb.style.backgroundColor = "black";
 rrhb.style.color = "white";
-rrhb.cursor = "pointer";
-rrhb.padding = "15px";
-rrhb.borderRadius = "10px";
+rrhb.style.cursor = "pointer";
+rrhb.style.padding = "15px";
+rrhb.style.borderRadius = "10px";
 rrhb.style.fontSize = "18px";
 
 doument.body.appendChild(rrhb);
