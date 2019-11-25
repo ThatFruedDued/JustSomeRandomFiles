@@ -1,3 +1,8 @@
+// Created by Frued Dued
+// TypeRacer is not affiliated with this program
+// Do not sell this program or pass it off as your own
+// Have fun!
+
 setInterval(Update, 0);
 
 function Update(){
