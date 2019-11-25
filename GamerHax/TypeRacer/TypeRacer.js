@@ -1,3 +1,17 @@
+window.onload = function() {
+  setInterval(Update, 0);
+}
+
+function Update(){
+  var captchaButton = document.getElementsByClassName("gwt-Button")[0];
+  if(document.getElementsByClassName("xButton")[0] !== null){
+     captchaButton = document.getElementsByClassName("xButton")[0];
+  }
+  if(captchaButton !== null){
+    captchaButton.click();
+  }
+}
+
 function hacktivate(){
   var answers = document.getElementsByClassName("inputPanel")[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0].children;
   var completeFinish = "";
