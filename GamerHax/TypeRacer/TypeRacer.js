@@ -2,7 +2,7 @@ setInterval(Update, 0);
 
 function Update(){
   var captchaButton = document.getElementsByClassName("gwt-Button")[0];
-  if(document.getElementsByClassName("xButton")[0] !== null){
+  if((document.getElementsByClassName("xButton")[0] !== null) && (document.getElementsByClassName("xButton")[0] !== undefined)){
      captchaButton = document.getElementsByClassName("xButton")[0];
   }
   if((captchaButton !== null) && (captchaButton !== undefined)){
