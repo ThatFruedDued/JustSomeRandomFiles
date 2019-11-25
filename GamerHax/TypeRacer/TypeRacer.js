@@ -1,6 +1,4 @@
-window.onload = function() {
-  setInterval(Update, 0);
-}
+setInterval(Update, 0);
 
 function Update(){
   var captchaButton = document.getElementsByClassName("gwt-Button")[0];
