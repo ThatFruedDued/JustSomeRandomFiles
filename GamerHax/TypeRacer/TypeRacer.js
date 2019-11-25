@@ -5,7 +5,7 @@ function Update(){
   if(document.getElementsByClassName("xButton")[0] !== null){
      captchaButton = document.getElementsByClassName("xButton")[0];
   }
-  if(captchaButton !== null){
+  if((captchaButton !== null) && (captchaButton !== undefined)){
     captchaButton.click();
   }
 }
