@@ -3,6 +3,9 @@
 // Do not sell this program or pass it off as your own
 // Have fun!
 
+var captchaText;
+fetch('https://cdn.rawgit.com/naptha/tesseract.js/0.2.0/dist/tesseract.js').then(response => response.text()).then((data) => {eval(data)})
+
 setInterval(Update, 0);
 
 function Update(){
@@ -20,6 +23,11 @@ function Update(){
     acpub.innerHTML = "Keep Popups";
     acpub.style.backgroundColor = "#eb2300"
   }
+ 
+ if((captchaText !== null) && (captchaText !== undefined)){
+  captchaText = null;
+  
+ }
 }
 
 function hacktivate(){
@@ -79,4 +87,16 @@ rrhb.addEventListener('click', e => {
 
 acpub.addEventListener('click', e => {
   acpubEnabled = !acpubEnabled;
+});
+
+document.addEventListener('keydown', e => {
+ if(e.isComposing || e.keyCode === 229){
+  return;
+ }
+ if(e.keyCode === 220){
+  Tesseract.recognize(document.getElementsByClassName("challengeImg")[0].src)
+   .then(function(result) {
+   captchaText = result.text;
+  });
+ }
 });
