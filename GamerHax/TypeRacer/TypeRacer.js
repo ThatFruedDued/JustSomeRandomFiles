@@ -25,8 +25,8 @@ function Update(){
   }
  
  if((captchaText !== null) && (captchaText !== undefined)){
+  document.getElementsByClassName("challengeTextArea")[0].value = captchaText;
   captchaText = null;
-  
  }
 }
 
