@@ -7,15 +7,15 @@ setInterval(Update, 0);
 
 function Update(){
  if(acpubEnabled){
-   acpub.innerHTML = "Automatically Close Popups";
-   acpub.style.backgroundColor = "#00ba10";
-   var captchaButton = document.getElementsByClassName("gwt-Button")[0];
-   if((document.getElementsByClassName("xButton")[0] !== null) && (document.getElementsByClassName("xButton")[0] !== undefined)){
-     captchaButton = document.getElementsByClassName("xButton")[0];
-   }
-   if((captchaButton !== null) && (captchaButton !== undefined))
-     captchaButton.click();
-   }
+    acpub.innerHTML = "Automatically Close Popups";
+    acpub.style.backgroundColor = "#00ba10";
+    var captchaButton = document.getElementsByClassName("gwt-Button")[0];
+    if((document.getElementsByClassName("xButton")[0] !== null) && (document.getElementsByClassName("xButton")[0] !== undefined)){
+      captchaButton = document.getElementsByClassName("xButton")[0];
+    }
+    if((captchaButton !== null) && (captchaButton !== undefined)){
+      captchaButton.click();
+    }
   } else {
     acpub.innerHTML = "Keep Popups";
     acpub.style.backgroundColor = "#eb2300"
@@ -36,7 +36,7 @@ function hacktivate(){
 var rrhb = document.createElement("BUTTON");
 rrhb.innerHTML = "Activate Hack";
 rrhb.style.position = "fixed";
-rrhb.style.bottom = "10px";
+rrhb.style.bottom = "66px";
 rrhb.style.left = "15px";
 rrhb.style.border = "none";
 rrhb.style.outline = "none";
@@ -52,7 +52,7 @@ var acpub = document.createElement("BUTTON");
 acpub.innerHTML = "Automatically Close Popups";
 acpub.style.position = "fixed";
 acpub.style.bottom = "10px";
-acpub.style.left = "0px";
+acpub.style.left = "15px";
 acpub.style.border = "none";
 acpub.style.outline = "none";
 acpub.style.backgroundColor = "#00ba10";
@@ -62,8 +62,8 @@ acpub.style.padding = "15px";
 acpub.style.borderRadius = "5px";
 acpub.style.fontSize = "18px";
 
-var acpubElement = document.body.appendChild(acpub);
-acpubElement.appendChild(rrhb);
+document.body.appendChild(acpub);
+document.body.appendChild(rrhb);
 
 rrhb.addEventListener('mouseenter', e => {
   rrhb.style.backgroundColor = "#555";
@@ -75,14 +75,6 @@ rrhb.addEventListener('mouseleave', e => {
 
 rrhb.addEventListener('click', e => {
   hacktivate();
-});
-
-acpub.addEventListener('mouseenter', e => {
-  rrhb.style.backgroundColor = "#555";
-});
-
-acpub.addEventListener('mouseleave', e => {
-  rrhb.style.backgroundColor = "black";
 });
 
 acpub.addEventListener('click', e => {
