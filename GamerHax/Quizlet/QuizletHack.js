@@ -242,7 +242,7 @@ function getExtensionSettings() {
                 cAlert('<h2>Game Mode: Micromatch</h2>Thank you for using SnowLord7s Quizlet Exploit<br>Without you, this exploit wouldnt be possible.<br><h4>Instructions:</h4>The timer will be paused when at choosen time.<br>The answers will also be highlighted for you.<br>At your leisure, solve the questions.<br><h4>Match Time: </h4><input type="text" id="matchTimeInput" value="0"></input><br><br><button class="UIButton" id="micromatchButton" type="button"><span class="UIButton-wrapper"><span>Inject</span></span></button>');
                 getId("micromatchButton").addEventListener("click", function () {
                     getId("customMessageContainer").remove();
-                    insaneWin("match", 0.5);
+                    insaneWin("match", 0.1);
                     micromatch();
                 });
             } else if (href.includes("/match")) {
@@ -250,7 +250,7 @@ function getExtensionSettings() {
                     getClass("UIModal is-white is-open")[0].style.display = "none";
                 } catch (e) {
                 }
-                cAlert('<h2>Game Mode: Match</h2>Thank you for using SnowLord7s Quizlet Exploit<br>Without you, this exploit wouldnt be possible.<br><h4>Instructions:</h4>The timer will be paused when at choosen time.<br>The answers will also be highlighted for you.<br>At your leisure, solve the questions.<br>By clicking INJECT the score will be automatically sent to Quizlet\'s servers. You do not even have to finish the game for your score to be sent!<br><h4>Match Time (Seconds): </h4><input type="text" id="matchTimeInput" value="' + (getExtensionSettings() ? getExtensionSettings().match.time : 0.5) + '"></input><br><br><button class="UIButton" id="matchButton" type="button"><span class="UIButton-wrapper"><span>Inject</span></span></button>');
+                cAlert('<h2>Game Mode: Match</h2>Thank you for using SnowLord7s Quizlet Exploit<br>Without you, this exploit wouldnt be possible.<br><h4>Instructions:</h4>The timer will be paused when at choosen time.<br>The answers will also be highlighted for you.<br>At your leisure, solve the questions.<br>By clicking INJECT the score will be automatically sent to Quizlet\'s servers. You do not even have to finish the game for your score to be sent!<br><h4>Match Time (Seconds): </h4><input type="text" id="matchTimeInput" value="' + (getExtensionSettings() ? getExtensionSettings().match.time : 0.1) + '"></input><br><br><button class="UIButton" id="matchButton" type="button"><span class="UIButton-wrapper"><span>Inject</span></span></button>');
                 getId("matchButton").addEventListener("click", function () {
                     insaneWin("match", getId("matchTimeInput").value);
                     getId("customMessageContainer").remove();
@@ -497,7 +497,7 @@ function getExtensionSettings() {
                         }
                     }
                 }
-            }, ((getExtensionSettings() ? getExtensionSettings().match.time : 0.5) * 1000));
+            }, ((getExtensionSettings() ? getExtensionSettings().match.time : 0.1) * 1000));
         }
 
         function micromatch() {
@@ -533,7 +533,7 @@ function getExtensionSettings() {
                         n.initEvent(t, !0, !1), e.dispatchEvent(n);
                     }
                 }
-            }, ((getExtensionSettings() ? getExtensionSettings().match.time : 0.5) * 1000));
+            }, ((getExtensionSettings() ? getExtensionSettings().match.time : 0.1) * 1000));
         }
 
         function learn() {
