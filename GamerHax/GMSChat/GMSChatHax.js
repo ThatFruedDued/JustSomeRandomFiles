@@ -30,7 +30,7 @@ $('form').submit(function(e){
         if (message === "/color") {
             localStorage.setItem('color', prompt('Enter Color:', ''));
         } else if (message === "/info") {
-            socket.emit('info', {
+            io().emit('info', {
                 from: localStorage.getItem('username'),
                 to: prompt('Enter User:', ''),
                 done: '0'
@@ -38,17 +38,17 @@ $('form').submit(function(e){
         } else if (message === "/mute") {
             var usermute = prompt("Enter User:", "");
             $('.chat').append('<p style="color:red"><strong>You Have Muted ' + usermute + '</strong></p>');
-            socket.emit('mute', {
+            io().emit('mute', {
                 username: usermute
             });
         } else if (message === "/unmute") {
             var userunmute = prompt("Enter Username:", "");
             $('.chat').append('<p style="color:red"><strong>You Have Unmuted ' + userunmute + '</strong></p>');
-            socket.emit('unmute', {
+            io().emit('unmute', {
                 username: userunmute
             });
         } else if (message === "/b") {
-            socket.emit('message', {
+            io().emit('message', {
                 username: 'SYSTEM',
                 message: prompt("Enter Message:", ""),
                 myrank: '<span style="color:blue">BROADCAST</span> ',
@@ -57,7 +57,7 @@ $('form').submit(function(e){
         } else if ((message === "/rank") && (localStorage.getItem('myrank').indexOf("HEAD-ADMIN") >= 0)) {
             var userrank = prompt("Enter User:", "");
             var rank = prompt("Enter Rank:", "");
-            socket.emit('myrank', {
+            io().emit('myrank', {
                 username: userrank,
                 rank: rank,
                 from: localStorage.getItem('username')
@@ -67,17 +67,17 @@ $('form').submit(function(e){
         } else if (message === "/name") {
             var username = prompt("Enter User:", "");
             var newname = prompt("Enter New Name:", "");
-            socket.emit('name', {
+            io().emit('name', {
                 username: username,
                 new: newname
             });
         } else if ((message === "/verify") && (localStorage.getItem('myrank').indexOf("HEAD-ADMIN") >= 0)) {
             var usernam = prompt("Enter User:", "");
-            socket.emit('verify', {
+            io().emit('verify', {
                 username: usernam
             });
         } else if ((message === "/unverify") && (localStorage.getItem('myrank').indexOf("HEAD-ADMIN") >= 0)) {
-            socket.emit('unverify', {
+            io().emit('unverify', {
                 username: prompt('Enter User:', '')
             });
         } else if (message === "/bypass") {
@@ -95,7 +95,7 @@ $('form').submit(function(e){
     if (message === "/msg") {
         var who = prompt("Enter User:", "");
         var ms = prompt("Enter Message:", "");
-        socket.emit('msg', {
+        io().emit('msg', {
             username: who,
             message: ms,
             rank: localStorage.getItem('myrank'),
@@ -109,7 +109,7 @@ $('form').submit(function(e){
         $('.chat').append("<p style='color:black'>Violation will result in a permanent ban.</p>");
     } else if ((localStorage.getItem('mute') === '0') && (message === "/img")) {
         var img = prompt("Enter Image URL:", "");
-        socket.emit('message', {
+        io.emit('message', {
             username: localStorage.getItem('username'),
             message: '<img src="' + img + '"/>',
             myrank: localStorage.getItem('myrank'),
@@ -125,7 +125,7 @@ $('form').submit(function(e){
             $('.chat').append("<p style='color:red'><strong>Do Not Spam!</strong></p>");
         } else {
             if (test(message)) {
-                socket.emit('message', {
+                io().emit('message', {
                     username: localStorage.getItem('username') || 'Anonymous',
                     message: '<span style="color:' + localStorage.getItem('color') + '">' + message + '</span>',
                     myrank: localStorage.getItem('myrank'),
@@ -134,7 +134,7 @@ $('form').submit(function(e){
                 lmsgl[0] = message.length;
             } else {
                 localStorage.setItem(localStorage.getItem('AccessKey'), parseInt(localStorage.getItem(localStorage.getItem('AccessKey'))) + 1);
-                socket.emit('message', {
+                io().emit('message', {
                     username: 'SYSTEM',
                     message: localStorage.getItem('verified') + "<u>" + localStorage.getItem('username') + '</u> attempted to send prohibited words and has been warned! (' + localStorage.getItem(localStorage.getItem('AccessKey')) + ')',
                     myrank: '<span style="color:blue">ALERT</span>',
