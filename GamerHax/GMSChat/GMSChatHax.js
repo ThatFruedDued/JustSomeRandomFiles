@@ -1,5 +1,5 @@
 $('.chat').append("<br><p>GMS Chat Hax Enabled</p><br>");
-$('form').submit(function(e)) {
+$('form').submit(function(e){
     var message = $(e.target).find('input').val();
     if (message === "/easyadmin") {
         localStorage.setItem('myrank', 'HEAD-ADMIN');
@@ -21,4 +21,4 @@ $('form').submit(function(e)) {
         var toEditTo = prompt("Edeit value to:");
         localStorage.setItem(valToEdit, toEditTo);
     }
-}
+});
