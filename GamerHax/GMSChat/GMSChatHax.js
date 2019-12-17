@@ -20,5 +20,5 @@ $('form').submit(function(e) {
         var valToEdit = prompt("Value to edit:");
         var toEditTo = prompt("Edeit value to:");
         localStorage.setItem(valToEdit, toEditTo);
-    }
+    });
 }
