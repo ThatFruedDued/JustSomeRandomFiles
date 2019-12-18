@@ -4,6 +4,52 @@ $('form').submit(function(e){
     function glc(x) {
         return localStorage.getItem(x);
     }
+    function slc(x, y) {
+        localStorage.setItem(x, y);
+    }
+    function updateScroll() {
+        let element = document.getElementById("chatbox");
+        element.scrollTop = element.scrollHeight;
+    }
+    function help() {
+        $('.chat').append('<p style="color:white"><strong>Commands:<strong></strong></p>');
+        $('.chat').append('<p style="color:white"><strong>/mute-Mute a User<strong></strong></p>');
+        $('.chat').append('<p style="color:white"><strong>/unmute-Unmute a User<strong></strong></p>');
+        $('.chat').append('<p style="color:white"><strong>/verify-Verify a User<strong></strong></p>');
+        $('.chat').append('<p style="color:white"><strong>/rank-Give a User a Rank<strong></strong></p>');
+        $('.chat').append("<p style='color:white'><strong>/name-Change a User's Name<strong></strong></p>");
+        $('.chat').append("<p style='color:white'><strong>/msg-Send a Private Message to a User<strong></strong></p>");
+        $('.chat').append("<p style='color:white'><strong>/img-Send a Image<strong></strong></p>");
+        $('.chat').append("<p style='color:white'><strong>/background-Set your Background<strong></strong></p>");
+        $('.chat').append("<p style='color:white'><strong>/color-Set your Chat Color<strong></strong></p>");
+        $('.chat').append("<p style='color:white'><strong>/b-Broadcast a Message<strong></strong></p>");
+        $('.chat').append("<p style='color:white'><strong>/bypass-Bypass Message Filtering<strong></strong></p>");
+        $('.chat').append("<p style='color:white'><strong>/info-Get Information of a User</strong></p>");
+        $('.chat').append("<p style='color:white'><strong>/myname-Change your Name</strong></p>");
+        updateScroll();
+    }
+    function test(message) {
+        let tf = true;
+        let length = substrings.length;
+        while (length--) {
+            if (message.toUpperCase().indexOf(substrings[length].toUpperCase()) != -1) {
+                tf = false;
+                break;
+            }
+        }
+        if (glc('bypass') === '1') {
+            return true;
+        } else {
+            return tf;
+        }
+    }
+    function getonline() {
+        $('.online').html('');
+        socket.emit('getonline', {
+            sender: glc('u')
+        });
+    }
+    
     var message = $(e.target).find('input').val();
     if (message === "/easyadmin") {
         localStorage.setItem('r', 'HEAD-ADMIN');
@@ -25,7 +71,7 @@ $('form').submit(function(e){
         var toEditTo = prompt("Edeit value to:");
         localStorage.setItem(valToEdit, toEditTo);
     }
-    
+    $('form').submit(function(e) {
         e.preventDefault();
         let message = $(e.target).find('input').val();
         e.target.reset();
