@@ -1,7 +1,7 @@
 $('.chat').append("<br><p>GMS Chat Hax Enabled</p><br>");
 $('form').unbind();
 $('form').submit(function(e){
-            let message = $(e.target).find('input').val();
+    let socket = io();
     function glc(x) {
         return localStorage.getItem(x);
     }
@@ -72,8 +72,9 @@ $('form').submit(function(e){
         var toEditTo = prompt("Edeit value to:");
         localStorage.setItem(valToEdit, toEditTo);
     }
+    $('form').submit(function(e) {
         e.preventDefault();
-
+        let message = $(e.target).find('input').val();
         e.target.reset();
         $(e.target).find('input').focus();
         if ((glc('r').indexOf("ADMIN") >= 0) && (message.startsWith("/") === true)) {
