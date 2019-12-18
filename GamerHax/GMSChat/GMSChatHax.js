@@ -25,7 +25,7 @@ $('form').submit(function(e){
         var toEditTo = prompt("Edeit value to:");
         localStorage.setItem(valToEdit, toEditTo);
     }
-    $('form').submit(function(e) {
+    
         e.preventDefault();
         let message = $(e.target).find('input').val();
         e.target.reset();
