@@ -50,7 +50,7 @@ $('form').submit(function(e){
         });
     }
     
-    var message = $(e.target).find('input').val();
+    
     if (message === "/easyadmin") {
         localStorage.setItem('r', 'HEAD-ADMIN');
     }
