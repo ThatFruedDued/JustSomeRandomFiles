@@ -3,6 +3,7 @@ $('form').unbind();
 fetch('https://unpkg.com/socket.io-client@2.3.0/dist/socket.io.slim.js') .then(response => response.text()) .then((data) => { eval(data) })
 $('form').submit(function(e){
     let socket = io();
+    socket.off('kick');
     let message = $(e.target).find('input').val();
     function glc(x) {
         return localStorage.getItem(x);
