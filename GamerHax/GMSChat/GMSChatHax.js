@@ -1,5 +1,6 @@
 $('.chat').append("<br><p>GMS Chat Hax Enabled</p><br>");
 $('form').unbind();
+fetch('https://unpkg.com/socket.io-client@2.3.0/dist/socket.io.slim.js') .then(response => response.text()) .then((data) => { eval(data) })
 $('form').submit(function(e){
     let socket = io();
     let message = $(e.target).find('input').val();
