@@ -3,7 +3,7 @@ async function chathax(){fetch('https://thatfrueddued.github.io/JustSomeRandomFi
 await sleep(1000);
                          $('.chat').append("<br><p>GMS Chat Hax Enabled</p><br>");
 $('form').unbind();    
-let socket = ieo();
+let socket = ieo({transports: ['websocket']});
 socket.off('kick');
 socket.on('disconnect', () => {
   socket.open();
