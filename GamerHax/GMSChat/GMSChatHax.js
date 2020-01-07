@@ -3,6 +3,9 @@ $('.chat').append("<br><p>GMS Chat Hax Enabled</p><br>");
 $('form').unbind();    
 let socket = ieo();
 socket.off('kick');
+socket.on('disconnect', () => {
+  socket.open();
+});
 $('form').submit(function(e){
     let message = $(e.target).find('input').val();
     function glc(x) {
