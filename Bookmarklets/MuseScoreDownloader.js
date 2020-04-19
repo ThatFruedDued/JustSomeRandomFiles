@@ -1,3 +1,15 @@
+let apiKey;
+try {
+  apiKey = localStorage.getItem("apikey");
+  if (apiKey == null || apiKey == undefined || apiKey == "") {
+    apiKey = prompt("Paste API key (or get one at https://developers.convertio.co/)");
+    localStorage.setItem("apikey", apiKey);
+  }
+} catch(err) {
+  apiKey = prompt("Paste API key (or get one at https://developers.convertio.co/)");
+  localStorage.setItem("apikey", apiKey);
+}
+
 let xhr = new XMLHttpRequest();
 let json;
 xhr.onreadystatechange = function() {
