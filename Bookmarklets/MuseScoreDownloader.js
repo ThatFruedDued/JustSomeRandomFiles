@@ -28,7 +28,7 @@ xhr.open("POST", "https://api.convertio.co/convert");
 xhr.setRequestHeader("Content-Type", "application/json");
 
 // Send the requst with Data
-xhr.send('{"apikey": "4ddf29f4df5f856a5fb62441d0002398", "file":"' + document.getElementsByTagName("img")[0].src + '", "filename":"score.svg", "outputformat":"pdf"}');
+xhr.send('{"apikey": "' + apiKey + '", "file":"' + document.getElementsByTagName("img")[0].src + '", "filename":"score.svg", "outputformat":"pdf"}');
 
 function getStatus() {
   let secondJson;
