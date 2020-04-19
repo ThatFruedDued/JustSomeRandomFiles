@@ -1,7 +1,7 @@
 let apiKey;
 try {
   apiKey = localStorage.getItem("apikey");
-  if (apiKey == null || apiKey == undefined || apiKey == "") {
+  if (apiKey == null || apiKey == undefined || apiKey == "" || apiKey == "null") {
     apiKey = prompt("Paste API key (or get one at https://developers.convertio.co/)");
     localStorage.setItem("apikey", apiKey);
   }
