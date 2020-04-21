@@ -28,7 +28,7 @@ xhr.open("POST", "https://api.convertio.co/convert");
 xhr.setRequestHeader("Content-Type", "application/json");
 
 // Send the requst with Data
-xhr.send('{"apikey": "' + apiKey + '", "input":"raw/base64", "file":"' + document.getElementsByClassName("no-attribution")[0].style.backgroundImage.split('base64,')[1].split('")')[0] + '", "filename":"icon.svg", "outputformat":"png"}');
+xhr.send('{"apikey": "' + apiKey + '", "input":"base64", "file":"' + document.getElementsByClassName("no-attribution")[0].style.backgroundImage.split('base64,')[1].split('")')[0] + '", "filename":"icon.svg", "outputformat":"png"}');
 
 function getStatus() {
   let secondJson;
