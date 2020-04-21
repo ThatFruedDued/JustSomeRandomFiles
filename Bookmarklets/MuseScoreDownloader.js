@@ -40,7 +40,7 @@ function getStatus() {
       //	Do what needs to be done here
       secondJson = JSON.parse(secondXhr.response);
       if (secondJson.data.step == "finish") {
-        var downloadElement = document.createElement("a");
+        let downloadElement = document.createElement("a");
         downloadElement.href = secondJson.data.output.url;
         downloadElement.download = "score.pdf";
         downloadElement.style.display = "none";
