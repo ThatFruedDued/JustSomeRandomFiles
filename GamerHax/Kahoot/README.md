@@ -10,7 +10,7 @@ Click the bookmarklet when entering game PIN. After the game pin is entered, you
 
 ### Kahoot! Nickname Generator Bypass
 
-Rules are no fun. Tha t's why I made the anti-rule nickname generator bypass script! Get yours today by getting the bookmarklet below.
+Rules are no fun. That's why I made the anti-rule nickname generator bypass script! Get yours today by getting the bookmarklet below.
 
 #### Get it! (auto-updating bookmarklet)
 
