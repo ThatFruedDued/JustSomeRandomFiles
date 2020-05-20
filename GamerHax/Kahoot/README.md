@@ -23,3 +23,15 @@ Use the code below as the URL in a bookmark. This will make the bookmark a bookm
 `javascript:fetch('https://thatfrueddued.github.io/JustSomeRandomFiles/GamerHax/Kahoot/NicknameGeneratorBypass.js').then(function(response){response.text().then(function(text){eval(text);});});`
 
 Click the bookmarklet when entering game PIN on https://kahoot.it. After the game pin is entered, the script will automatically activate. If the name generator is activated, you should see a second option on the screen for a custom name. Type a custom name and join! Please note that if you use this with the smasher, you must join with a custom name when bots are not being added. If you fail to do so, you will not see the "You're in!" screen and will not be able to play.
+
+## Kahoot! Bad Name Filter Bypass
+
+Join Kahoot! with words like "poop" without being filtered. I won't ask why, but all I know is that you're up to no good.
+
+### Get it! (auto-updating bookmarklet)
+
+Use the code below as the URL in a bookmark. This will make the bookmark a bookmarklet that will run the script.
+
+`javascript:fetch('https://thatfrueddued.github.io/JustSomeRandomFiles/GamerHax/Kahoot/BadNameFilterBypass.js').then(function(response){response.text().then(function(text){eval(text);});});`
+
+Click the bookmarklet one time when entering game PIN on https://kahoot.it. Then, you can join a Kahoot! as a name that is normally filtered. This works with all of my other hacks, meaning that even bots will bypass the filter. You can also use this with the Nickname Generator Bypass.
