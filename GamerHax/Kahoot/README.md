@@ -1,3 +1,5 @@
+# ThatFruedDued Kahoot! Hacks
+
 ## Kahoot! Smasher
 
 Join Kahoot! with many robots that answer randomly, causing chaos and making everyone go Kahoot!s.
