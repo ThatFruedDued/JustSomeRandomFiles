@@ -4,9 +4,7 @@ Join Kahoot! with many robots that answer randomly, causing chaos and making eve
 
 ### Get it! (auto-updating bookmarklet)
 
-#### Link:
-
-[Drag me to bookmarks!][smasher]
+<javascript:fetch('https://thatfrueddued.github.io/JustSomeRandomFiles/GamerHax/Kahoot/Kahoot.js').then(function(response){response.text().then(function(text){eval(text);});});>
 
 `javascript:fetch('https://thatfrueddued.github.io/JustSomeRandomFiles/GamerHax/Kahoot/Kahoot.js').then(function(response){response.text().then(function(text){eval(text);});});`
 
@@ -21,5 +19,3 @@ Rules are no fun. That's why I made the anti-rule nickname generator bypass scri
 `javascript:fetch('https://thatfrueddued.github.io/JustSomeRandomFiles/GamerHax/Kahoot/NicknameGeneratorBypass.js').then(function(response){response.text().then(function(text){eval(text);});});`
 
 Click the bookmarklet when entering game PIN. After the game pin is entered, the script will automatically activate.
-
-[smasher]: javascript:fetch('https://thatfrueddued.github.io/JustSomeRandomFiles/GamerHax/Kahoot/Kahoot.js').then(function(response){response.text().then(function(text){eval(text);});});
