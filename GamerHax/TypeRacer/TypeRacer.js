@@ -1,4 +1,4 @@
-// Created by Frued Dued
+// Created by @ThatFruedDued
 // TypeRacer is not affiliated with this program
 // Do not sell this program or pass it off as your own
 // Have fun!
@@ -23,7 +23,7 @@ function Update(){
     acpub.innerHTML = "Keep Popups";
     acpub.style.backgroundColor = "#eb2300"
   }
- 
+
  if((captchaText !== null) && (captchaText !== undefined)){
   document.getElementsByClassName("challengeTextArea")[0].value = captchaText;
   captchaText = null;
