@@ -34,7 +34,7 @@ Use the code below as the URL in a bookmark. This will make the bookmark a bookm
 
 `javascript:fetch('https://thatfrueddued.github.io/JustSomeRandomFiles/GamerHax/Kahoot/BadNameFilterBypass.js').then(function(response){response.text().then(function(text){eval(text);});});`
 
-Click the bookmarklet one time when entering game PIN on https://kahoot.it. Then, you can join a Kahoot! as a name that is normally filtered. This works with all of my other hacks, meaning that even bots will bypass the filter. You can also use this with the Nickname Generator Bypass. Just keep in mind that this hack must be activated first.
+Click the bookmarklet one time when entering game PIN on https://kahoot.it. Then, you can join a Kahoot! as a name that is normally filtered. This works with all of my other hacks, meaning that even bots will bypass the filter. You can also use this with the Nickname Generator Bypass. **IMPORTANT**: This script **must** be activated **before** other scripts in order for it to function.
 
 ## Kahoot! Name Too Long Bypass
 
